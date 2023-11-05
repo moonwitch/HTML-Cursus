@@ -1,0 +1,60 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #f2f2f2;
+    padding: 1rem;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+nav a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Main content styles */
+main {
+    padding: 1rem;
+}
+
+/* Footer styles */
+footer {
+    background-color: #f2f2f2;
+    padding: 1rem;
+    text-align: center;
+}

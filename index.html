@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Super Mario: The movie</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body>
+    <style>
+  .parallax {
+    /* The image used */
+    background-image: url('path-to-your-second-image.jpg');
+
+    /* Set a specific height */
+    min-height: 1000px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Position relative to place the overlay pseudo-element */
+    position: relative;
+  }
+
+  .parallax::after {
+    /* This is the overlay pseudo-element */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  }
+
+  /* Add some padding and text-align to center content */
+  .content {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position: relative; /* Make sure content is above the overlay */
+    z-index: 1; /* Higher z-index so that the content is above the overlay */
+  }
+</style>
+</head>
+<body>
+
+<div class="parallax"></div>
+
+<div class="content">
+  <h1>Welcome to My Website</h1>
+  <p>Insert your cool content here.</p>
+</div>
+
+    <button id="theme-switcher">Switch Theme</button>
+	<script src="./assets/index.js"></script>
+
+    <script>
+        ('theme-switcher').addEventListener('click', function() {
+    var body = document.body;
+    if (body.classList.contains('light-theme')) {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+    } else {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+    }
+});
+    </script>
+  </body>
+</html>
