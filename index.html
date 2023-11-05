@@ -1,75 +1,85 @@
 <!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Super Mario: The movie</title>
-    <link rel="stylesheet" href="./assets/styles.css">
-  </head>
-  <body>
-    <style>
-  .parallax {
-    /* The image used */
-    background-image: url('path-to-your-second-image.jpg');
+<html lang="nl" data-theme="light">
 
-    /* Set a specific height */
-    min-height: 1000px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    /* Position relative to place the overlay pseudo-element */
-    position: relative;
-  }
-
-  .parallax::after {
-    /* This is the overlay pseudo-element */
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-  }
-
-  /* Add some padding and text-align to center content */
-  .content {
-    text-align: center;
-    padding: 20px;
-    color: white;
-    position: relative; /* Make sure content is above the overlay */
-    z-index: 1; /* Higher z-index so that the content is above the overlay */
-  }
-</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Een kleine site over een leuke film; Super Mario Bros. The Movie">
+  <meta name="keywords" content="film, review, recensies, mario, super mario, nintendo">
+  <meta name="author" content="Kelly">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Super Mario Bros. Movie</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+  {{/*  <script src="./assets/theme-switch.js" defer></script>  */}}
 </head>
+
 <body>
+  <style>
 
-<div class="parallax"></div>
+  </style>
+  </head>
 
-<div class="content">
-  <h1>Welcome to My Website</h1>
-  <p>Insert your cool content here.</p>
-</div>
-
-    <button id="theme-switcher">Switch Theme</button>
-	<script src="./assets/index.js"></script>
+  <body>
+    <button 
+      type="button" 
+      data-theme-toggle 
+      aria-label="Toggle theme"
+      aria-live="polite"
+    >
+      *star*
+    </button>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur doloribus mollitia eum similique accusantium provident enim culpa exercitationem, corporis deleniti ipsam quo adipisci, eaque explicabo doloremque odit deserunt. Numquam.
+    </p>
 
     <script>
-        ('theme-switcher').addEventListener('click', function() {
-    var body = document.body;
-    if (body.classList.contains('light-theme')) {
-        body.classList.remove('light-theme');
-        body.classList.add('dark-theme');
-    } else {
-        body.classList.remove('dark-theme');
-        body.classList.add('light-theme');
-    }
-});
+      function updateButton({ buttonEl, isDark }) {
+          const newCta = isDark ? "Change to light theme" : "Change to dark theme";
+          // use an aria-label if you are omitting text on the button
+          // and using a sun/moon icon, for example
+          buttonEl.setAttribute("aria-label", newCta);
+          buttonEl.innerText = newCta;
+        }
+
+      function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+        if (localStorageTheme !== null) {
+          return localStorageTheme;
+        }
+
+        if (systemSettingDark.matches) {
+          return "dark";
+        }
+
+        return "light";
+      }
+
+      function updateThemeOnHtmlEl({ theme }) {
+        document.querySelector("html").setAttribute("data-theme", theme);
+      }
+
+      const button = document.querySelector("[data-theme-toggle]");
+      const localStorageTheme = localStorage.getItem("theme");
+      const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+      let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+
+      // update on page load
+      updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
+      updateThemeOnHtmlEl({ theme: currentThemeSetting });
+
+      // update on theme button click
+      button.addEventListener("click", () => {
+        const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+
+        localStorage.setItem("theme", newTheme);
+        updateButton({ buttonEl: button, isDark: newTheme === "dark" });
+        updateThemeOnHtmlEl({ theme: newTheme });
+
+        currentThemeSetting = newTheme;
+      });
     </script>
+
+
   </body>
+
 </html>

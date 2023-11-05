@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Super Mario: The movie</title>
-    <link rel="stylesheet" href="./assets/styles.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Een kleine site over een leuke film; Super Mario Bros. The Movie">
+  <meta name="keywords" content="film, review, recensies, mario, super mario, nintendo">
+  <meta name="author" content="Kelly">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Super Mario Bros. Movie</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+  <style>
+
+  </style>
   </head>
+
   <body>
-	<script src="./assets/index.js"></script>
+
+    <div class="parallax"></div>
+
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>Insert your cool content here.</p>
+
+      <button id="theme-switcher">Switch Theme</button>
+
+    </div>
+    <script>
+      ('theme-switcher').addEventListener('click', function () {
+        var body = document.body;
+        if (body.classList.contains('light-theme')) {
+          body.classList.remove('light-theme');
+          body.classList.add('dark-theme');
+        } else {
+          body.classList.remove('dark-theme');
+          body.classList.add('light-theme');
+        }
+      });
+    </script>
   </body>
+
 </html>
