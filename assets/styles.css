@@ -1,45 +1,76 @@
 /* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
-/* variables */
-var(--background-color): #23BFFE;
-var(--text-color): #2F0029;
-var(--accent-medium): #F27777;
-/* purple #8C3286 */
-/* Light blue #C5F3FF */
-/* green #CBF291 */
-
-/*  Dark vs light */
-[data-theme="light"] {
-    --color-bg: #ffffff;
-    --color-fg: #000000;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-[data-theme="dark"] {
-    --color-bg: #000000;
-    --color-fg: #ffffff;
-}
-
-button {
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    cursor: pointer;
-    color: var(--color-fg);
-    background-color: var(--color-bg);
-    border: 0.25rem solid var(--color-fg);
-}
-
-/* Global styles */
 body {
-    background: var(--color-bg);
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
     line-height: 1.5;
-    color: var(--color-fg);
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* variables */
+:root {
+    --bg-color: #23BFFE;
+    --text-color: #2F0029;
+    --accent-medium: #F27777;
+    --accent-dark: #8C3286;
+    --accent-light: #C5F3FF;
+    --green: #CBF291;
+}
+
+/* Navigation */
+nav {
+    box-sizing: border-box;
+    padding: .75rem .75rem;
+    margin: auto;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.page__menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu__list{
+    display: flex;
+    list-style: none;
+}
+
+.menu__link {
+    padding: 1.5rem 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    will-change: color;
+    transition: color .25s ease-out;
+}
+
+/* box around focused link, grey out NON focused links */
+.menu__link:focus {
+    outline: 2px solid var(--accent-medium);
+    outline-offset: 0;
+}
+.menu:hover .menu__link:not(:hover) {
+    --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
 }
