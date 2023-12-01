@@ -1,5 +1,10 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Press+Start+2P&display=swap');
+
 /* Reset styles */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -13,35 +18,106 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
 }
 
-#root, #__next {
+#root,
+#__next {
     isolation: isolate;
 }
 
-/* variables */
+/* Variables */
 :root {
     --bg-color: #23BFFE;
     --text-color: #2F0029;
     --accent-medium: #F27777;
     --accent-dark: #8C3286;
     --accent-light: #C5F3FF;
-    --green: #CBF291;
+    --coin-gold: #FFD700;
+    /* fonts */
+    --main-font: 'IBM Plex Mono', sans-serif;
+    --header-font: 'Press Start 2P', cursive;
+}
+
+/* Global styles */
+body {
+    /* little hack to add a background image with overlay ;) */
+    background: linear-gradient(to right, rgba(255, 255, 155, .6), rgba(155, 255, 255, .6)), url('./img/retro-bg.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: var(--main-font);
+    /* get my footer to the bottom */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font);
+}
+
+h1 {
+    font-size: 2rem;
+    text-shadow: 1px 1px 0px #000, 3px 3px 0px rgba(0, 0, 0, 0.75);
+    color: var(--coin-gold);
+    /* Shadow for depth */
+    -webkit-font-smoothing: none;
+    /* Disable font smoothing */
+    text-rendering: optimizeLegibility;
+}
+
+header {
+    font-family: var(--header-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    /* push footer to bottom */
+    padding: 2rem;
+}
+
+footer {
+    font-family: var(--header-font);
+    background-color: var(--text-color);
+    color: var(--coin-gold);
+    padding: 1rem;
+    text-align: center;
 }
 
 /* Navigation */
 nav {
+    font-family: var(--header-font);
     box-sizing: border-box;
     padding: .75rem .75rem;
-    margin: auto;
+    margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
@@ -49,9 +125,10 @@ nav {
 .page__menu {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-.menu__list{
+.menu__list {
     display: flex;
     list-style: none;
 }
@@ -66,11 +143,4 @@ nav {
     transition: color .25s ease-out;
 }
 
-/* box around focused link, grey out NON focused links */
-.menu__link:focus {
-    outline: 2px solid var(--accent-medium);
-    outline-offset: 0;
-}
-.menu:hover .menu__link:not(:hover) {
-    --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
-}
+/* Content */
