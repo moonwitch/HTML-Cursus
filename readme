@@ -4,11 +4,10 @@ Je moet minstens enkele pagina's bouwen die met elkaar gelinkt zijn.
 Begin bv. met een hoofdpagina, een pagina met een overzicht van acteurs, een pagina met enkele afbeeldingen uit de film, een pagina met recenties + formulier om recenties toe te voegen, enz... 
 Je mag creatief zijn!
 
-- [] Voeg de juiste meta tags toe aan elke pagina
+- [x] Voeg de juiste meta tags toe aan elke pagina
 - [] Denk na of je elementen kan groeperen, zodat je er een bepaalde vormgeving aan kan geven
 - [] Gebruik ook een tabel met samengevoegde cellen
 - [] Denk na waar je de juist tekst elementen kan gebruiken, zoals quote, blockquote, abbr, dfn, enz...
-- [] Maak gebruik van een achtergrond afbeelding, bv. op de body of op een DIV element
-- [] Gebruik classname-stijlkiezers op verschillende elementen om een mooie vormgeving te voorzien
+- [x] Maak gebruik van een achtergrond afbeelding, bv. op de body of op een DIV element
+- [x] Gebruik classname-stijlkiezers op verschillende elementen om een mooie vormgeving te voorzien
 
-CBBE-2YVP-XXBW-7EPU-DZDV

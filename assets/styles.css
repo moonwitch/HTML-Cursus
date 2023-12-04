@@ -143,4 +143,31 @@ nav {
     transition: color .25s ease-out;
 }
 
-/* Content */
+/* Reviews */
+.reviews {
+    margin-bottom: 2rem;
+}
+
+.review blockquote {
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+.review footer {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.submit-review form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.submit-review label,
+.submit-review input,
+.submit-review textarea,
+.submit-review button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
