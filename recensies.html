@@ -21,17 +21,14 @@
   Header
   ============================-->
   <header id="header">
-    <nav class="page__menu">
-      <ul class="menu__list">
-        <li class="menu__group"><a class="menu__link" href="./index.html">Home</a></li>
-        <li class="menu__group"><a class="menu__link" href="./voices.html">Stemacteurs</a></li>
-        <li class="menu__group"><a class="menu__link" href="./recensies.html">Recensies</a></li>
-        <li class="menu__group"><a class="menu__link" href="./games.html">Games</a></li>
-      </ul>
+    <nav class="page__nav">
+      <a class="menu__link" href="./index.html">Home</a>
+      <a class="menu__link" href="./voices.html">Stemacteurs</a>
+      <a class="menu__link" href="./recensies.html">Recensies</a>
     </nav>
 
     <h1>The Super Mario Bros. Movie</h1>
-    <h2>De film die de game-industrie veranderde</h2>
+    <h2>De film die de game wel volgde</h2>
   </header><!-- end header -->
 
   <!--==========================
@@ -39,37 +36,44 @@
   ============================-->
   <main id="main">
     <section class="reviews">
-      <h2>De kijker vond</h2>
+      <header>
+        <h2>Recensies</h2>
+      </header>
       <article class="review">
         <blockquote>
-          "This is the best Mario movie site I've ever seen! The layout is amazing and the content is top-notch."
+          Super Mario Bros. Movie is een leuke en actievolle avonturenfilm die fans van de videogameserie zal aanspreken. De stemacteurs zijn top, en de animatie is prachtig. De film zal zeker publiek van alle leeftijden aanspreken.
         </blockquote>
-        <footer>- John Doe, Gamer</footer>
+        <cite>Joris Zwarts, gamer</cite>
       </article>
       <article class="review">
         <blockquote>
-          "I love the character profiles and the trivia sections. Really captures the spirit of Super Mario!"
+          Super Mario Bros. Movie is een getrouwe bewerking van de videogameserie, en het weet de personages en humor van de games perfect te vangen. De film zit ook vol met spannende actiesequenties en memorabele momenten. Ik raad deze film ten zeerste aan aan alle fans van Mario.
         </blockquote>
-        <footer>- Jane Smith, Mario Fan</footer>
+        <cite>Piet Piraat, filmfanaat</cite>
       </article>
-      <!-- Add more reviews here -->
+      <article class="review">
+        <blockquote>
+          Super Mario Bros. Movie is een heerlijke en nostalgische reis naar het Mushroom Kingdom. De film zal zeker nostalgische gevoelens oproepen bij fans van de videogameserie, en het zal ook een nieuwe generatie fans kennis laten maken met Mario.
+        </blockquote>
+        <cite>Janne Smit, Mario fan</cite>
+      </article>
     </section>
+
     <section class="submit-review">
-      <h2>Stuur uw Beoordeling in</h2>
+      <h3>Stuur uw Beoordeling in</h3>
       <form id="reviewForm">
         <label for="name">Uw Naam:</label>
         <input type="text" id="name" name="name" required>
     
         <label for="review">Uw Beoordeling:</label>
-        <textarea id="review" name="review" required></textarea>
+        <textarea id="review" name="reviewText" required rows="5"></textarea>
     
         <button type="submit">Beoordeling Versturen</button>
       </form>
-      <div id="confirmationMessage" style="display:none;">
+      <span id="confirmationMessage" style="display:none;">
         Bedankt voor het indienen van uw beoordeling!
-      </div>
+      </span>
     </section>
-
   </main><!-- end main -->
 
   <!--==========================
@@ -81,20 +85,24 @@
     </small>
   </footer><!-- end footer -->
 
-  <!-- Libraries JavaScript Files -->
+  <!-- JavaScript -->
   <script>
     document.getElementById('reviewForm').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevents the form from submitting in the traditional way
+      event.preventDefault();
 
-      var name = document.getElementById('name').value;
-      var review = document.getElementById('review').value;
+      const name = document.getElementById('name').value;
+      const reviewText = document.getElementById('review').value;
 
-      console.log("Name: " + name); // For demonstration, log the name
-      console.log("Review: " + review); // Log the review
+      const reviewArticle = document.createElement('article');
+      reviewArticle.classList.add('review');
+      reviewArticle.innerHTML = `
+          <blockquote>${reviewText}</blockquote>
+          <cite>${name}</cite>
+        `;
 
-      // Display a confirmation message
-      var confirmationMessage = document.getElementById('confirmationMessage');
-      confirmationMessage.style.display = 'block';
+      document.querySelector('.reviews').appendChild(reviewArticle);
+
+      document.getElementById('confirmationMessage').style.display = 'block';
 
       // Clear the form fields
       document.getElementById('name').value = '';
