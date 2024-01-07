@@ -87,7 +87,7 @@ h6 {
     font-family: var(--header-font);
 }
 
-h1:first-of-type {
+h1.site-header {
     font-size: 2rem;
     text-shadow: var(--shadow);
     color: var(--coin-gold);
@@ -98,7 +98,7 @@ h1:first-of-type {
     margin: 1rem 0 1rem;
 }
 
-h2:first-of-type {
+h2.site-header {
     margin: 0 0 1rem;
 }
 
@@ -163,7 +163,7 @@ section > header {
     font-size: .75rem;
     display: block;
     margin: auto;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
 }
 
 figure {
@@ -190,6 +190,17 @@ td>img.chars {
     max-height: 200px;
     float: right;
     margin: 0 2rem;
+}
+
+/* Games list */
+header.platform{
+    margin: 1rem;
+    vertical-align: middle;
+}
+
+ul.games {
+    list-style: none;
+    margin: 0 1rem;
 }
 
 /* Reviews */

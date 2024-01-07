@@ -20,20 +20,21 @@
   <!--==========================
   Header
   ============================-->
-  <header id="header">
+  <header class="site-header">
     <nav class="page__nav">
       <a class="menu__link" href="./index.html">Home</a>
       <a class="menu__link" href="./voices.html">Stemacteurs</a>
       <a class="menu__link" href="./recensies.html">Recensies</a>
+      <a class="menu__link" href="./games.html">Games</a>
     </nav>
-
-    <h1>The Super Mario Bros. Movie</h1>
-    <h2>De film die de game wel volgde</h2>
+  
+    <h1 class="site-header">The Super Mario Bros. Movie</h1>
+    <h2 class="site-header">De film die de game wel volgde</h2>
   </header><!-- end header -->
 
   <!--==========================
-  Main
-  ============================-->
+Main
+============================-->
   <main id="main">
     <section class="reviews">
       <header>
@@ -41,19 +42,25 @@
       </header>
       <article class="review">
         <blockquote>
-          Super Mario Bros. Movie is een leuke en actievolle avonturenfilm die fans van de videogameserie zal aanspreken. De stemacteurs zijn top, en de animatie is prachtig. De film zal zeker publiek van alle leeftijden aanspreken.
+          Super Mario Bros. Movie is een leuke en actievolle avonturenfilm die fans van de videogameserie zal
+          aanspreken. De stemacteurs zijn top, en de animatie is prachtig. De film zal zeker publiek van alle leeftijden
+          aanspreken.
         </blockquote>
         <cite>Joris Zwarts, gamer</cite>
       </article>
       <article class="review">
         <blockquote>
-          Super Mario Bros. Movie is een getrouwe bewerking van de videogameserie, en het weet de personages en humor van de games perfect te vangen. De film zit ook vol met spannende actiesequenties en memorabele momenten. Ik raad deze film ten zeerste aan aan alle fans van Mario.
+          Super Mario Bros. Movie is een getrouwe bewerking van de videogameserie, en het weet de personages en humor
+          van de games perfect te vangen. De film zit ook vol met spannende actiesequenties en memorabele momenten. Ik
+          raad deze film ten zeerste aan aan alle fans van Mario.
         </blockquote>
         <cite>Piet Piraat, filmfanaat</cite>
       </article>
       <article class="review">
         <blockquote>
-          Super Mario Bros. Movie is een heerlijke en nostalgische reis naar het Mushroom Kingdom. De film zal zeker nostalgische gevoelens oproepen bij fans van de videogameserie, en het zal ook een nieuwe generatie fans kennis laten maken met Mario.
+          Super Mario Bros. Movie is een heerlijke en nostalgische reis naar het Mushroom Kingdom. De film zal zeker
+          nostalgische gevoelens oproepen bij fans van de videogameserie, en het zal ook een nieuwe generatie fans
+          kennis laten maken met Mario.
         </blockquote>
         <cite>Janne Smit, Mario fan</cite>
       </article>
@@ -64,10 +71,10 @@
       <form id="reviewForm">
         <label for="name">Uw Naam:</label>
         <input type="text" id="name" name="name" required>
-    
+
         <label for="review">Uw Beoordeling:</label>
         <textarea id="review" name="reviewText" required rows="5"></textarea>
-    
+
         <button type="submit">Beoordeling Versturen</button>
       </form>
       <span id="confirmationMessage" style="display:none;">
@@ -77,11 +84,12 @@
   </main><!-- end main -->
 
   <!--==========================
-  Footer
-  ============================-->
+Footer
+============================-->
   <footer>
     <small>
-      © 2023 Kelly Crabbé; made with ☕ and &hearts;
+      © 2023 Kelly Crabbé; made with ☕ and &hearts;<br />
+      Images taken from Wikipedia
     </small>
   </footer><!-- end footer -->
 
@@ -96,9 +104,9 @@
       const reviewArticle = document.createElement('article');
       reviewArticle.classList.add('review');
       reviewArticle.innerHTML = `
-          <blockquote>${reviewText}</blockquote>
-          <cite>${name}</cite>
-        `;
+<blockquote>${reviewText}</blockquote>
+<cite>${name}</cite>
+`;
 
       document.querySelector('.reviews').appendChild(reviewArticle);
 
