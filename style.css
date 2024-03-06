@@ -1,0 +1,77 @@
+/*
+EINDOPDRACHT CSS
+Kleuren:
+Rood: #af2100 (donker / hover) #9e1d00
+Grijswaarden: #bdbdbd #656565 #aeaeae
+ */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --red: #af2100;
+    --red-dark: #9e1d00;
+    --grey-light: #bdbdbd;
+    --grey: #656565;
+    --grey-dark: #aeaeae;
+
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Basic styling */
+body {
+    font-family: var(--font-family);
+    background: url(./img/white-bg.png);
+    color: var(--grey);
+}
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--red);
+    border-bottom: var(--red-dark) 5px solid;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+article {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+
+.read-more {
+    color: var(--red-dark);
+    text-decoration: none;
+}
+
+.date,
+.category {
+    color: #999999;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+footer {
+    /* background: url(./img/black-bg.png); */
+    padding: 20px;
+    text-align: center;
+}
