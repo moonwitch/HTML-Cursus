@@ -5,11 +5,14 @@ Rood: #af2100 (donker / hover) #9e1d00
 Grijswaarden: #bdbdbd #656565 #aeaeae
  */
 
-/* Reset some default styles */
-* {
+/* Reset some basic elements */
+body,
+h1,
+h2,
+h3,
+ul {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /* Variables */
@@ -26,52 +29,82 @@ Grijswaarden: #bdbdbd #656565 #aeaeae
 /* Basic styling */
 body {
     font-family: var(--font-family);
+    line-height: 1.6;
     background: url(./img/white-bg.png);
     color: var(--grey);
 }
 
-header {
-    width: 80%;
-    margin: 0 auto;
-    background-color: var(--red);
-    border-bottom: var(--red-dark) 5px solid;
-    color: #ffffff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 nav ul {
     list-style: none;
+    text-align: center;
+    padding: 10px 0;
 }
 
 nav ul li {
-    display: inline-block;
+    display: inline;
     margin-right: 20px;
 }
 
-article {
+nav ul li a {
+    text-decoration: none;
+    color: var(--red-dark);
+    /* set font to lowercase */
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 60px;
+    color: var(--grey-light);
+    text-align: left;
+    padding-left: 20px;
+    background-color: var(--red);
+    border-bottom: 5px solid var(--red-dark);
+}
+
+.articles article {
     margin: 20px;
     padding: 20px;
-    border: 1px solid #dddddd;
-    background-color: #ffffff;
+}
+
+.articles time {
+    font-style: italic;
+    color: #999;
+}
+
+.articles h2 {
+    color: #333;
+}
+
+.articles p {
+    color: #666;
 }
 
 .read-more {
-    color: var(--red-dark);
+    color: #900;
     text-decoration: none;
 }
 
-.date,
-.category {
-    color: #999999;
-    font-size: 14px;
-    margin-right: 10px;
+footer {
+    background: url("./img/black-bg.png");
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
 }
 
-footer {
-    /* background: url(./img/black-bg.png); */
-    padding: 20px;
-    text-align: center;
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    line-height: 2.5;
+    font-style: italic;
 }
