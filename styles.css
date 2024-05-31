@@ -1,0 +1,182 @@
+/* EINDOPDRACHT CSS
+Kleuren:
+Rood: #af2100 (donker / hover) #9e1d00
+Grijswaarden: #bdbdbd #656565 #aeaeae
+*/
+
+/* Reset some basic elements */
+body,
+h1,
+h2,
+h3,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables */
+:root {
+    --red: #af2100;
+    --red-dark: #9e1d00;
+    --grey-light: #bdbdbd;
+    --grey: #656565;
+    --grey-dark: #aeaeae;
+
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Basic styling */
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background: url(./img/white-bg.png) repeat,
+        url(./img/black-bg.png) repeat-x bottom;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.logo-container {
+    background-color: var(--red);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 8px solid var(--red-dark);
+    width: 165px;
+    height: 120px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-baseline;
+    gap: 20px;
+}
+
+header nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: var(--red);
+    /* Same color as article titles */
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.post {
+    margin-bottom: 30px;
+    /* Increased bottom margin */
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    /* Align items in the center */
+}
+
+.post .date {
+    flex: 0 0 150px;
+    color: var(--grey-light);
+    text-align: right;
+    font-size: calc(1.2em + 2px);
+    /* Adjusting size relative to h3 */
+    align-self: flex-start;
+    /* Align date with title */
+}
+
+.post .category {
+    color: var(--grey-light);
+    text-align: right;
+    font-size: calc(1.2em + 2px);
+    /* Same size as date */
+    margin-top: 5px;
+    align-self: flex-start;
+    /* Align category with title */
+}
+
+.post .content {
+    flex: 1;
+}
+
+.post .content h2 {
+    margin-top: 0;
+    color: var(--red);
+    font-style: italic;
+    /* Italic style for article titles */
+}
+
+.post .content .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 20px;
+    /* 10px less in height */
+    background-color: var(--red);
+    color: white;
+    text-decoration: none;
+    width: 190px;
+    /* Adjusted width */
+    text-align: center;
+    font-style: italic;
+    /* Italic style for read more */
+}
+
+.post .content .read-more:hover {
+    background-color: var(--red-dark);
+}
+
+/* Footer */
+.footer-container {
+    background: url("./img/black-bg.png");
+    color: white;
+    padding: 20px;
+}
+
+footer {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+footer h3 {
+    color: var(--grey);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    line-height: 2.5;
+    font-style: italic;
+}
