@@ -21,7 +21,6 @@ ul {
     --grey-light: #bdbdbd;
     --grey: #656565;
     --grey-dark: #aeaeae;
-
     --font-family: 'Arial', sans-serif;
 }
 
@@ -34,14 +33,15 @@ body {
     color: black;
 }
 
+/* Header styling */
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     padding: 20px;
     width: 70%;
     margin: 0 auto;
-
+    height: 120px;
 }
 
 .logo-container {
@@ -50,9 +50,9 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    border-bottom: 8px solid var(--red-dark);
+    border-bottom: 10px solid var(--red-dark);
     width: 165px;
-    height: 120px;
+    height: 100%;
 }
 
 .logo {
@@ -64,7 +64,7 @@ header {
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-baseline;
+    justify-content: baseline;
     gap: 20px;
 }
 
@@ -77,10 +77,12 @@ header nav ul li a {
     color: var(--red);
     /* Same color as article titles */
     text-decoration: none;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
+    font-style: italic;
 }
 
+/* Main content styling */
 main {
     padding: 20px;
     width: 80%;
@@ -93,28 +95,20 @@ main {
     padding: 20px;
     display: flex;
     gap: 20px;
-    align-items: center;
-    /* Align items in the center */
+    align-items: baseline;
+    /* Align items on the baseline */
 }
 
-.post .date {
+.post .date,
+.post .category {
     flex: 0 0 150px;
     color: var(--grey-light);
     text-align: right;
-    font-size: calc(1.2em + 2px);
+    font-weight: 700;
+    font-size: 22px;
     /* Adjusting size relative to h3 */
-    align-self: flex-start;
+    align-self: baseline;
     /* Align date with title */
-}
-
-.post .category {
-    color: var(--grey-light);
-    text-align: right;
-    font-size: calc(1.2em + 2px);
-    /* Same size as date */
-    margin-top: 5px;
-    align-self: flex-start;
-    /* Align category with title */
 }
 
 .post .content {
@@ -122,10 +116,12 @@ main {
 }
 
 .post .content h2 {
-    margin-top: 0;
     color: var(--red);
     font-style: italic;
     /* Italic style for article titles */
+    font-weight: bolder;
+    margin: 0;
+    /* Remove margin */
 }
 
 .post .content .read-more {
@@ -147,7 +143,7 @@ main {
     background-color: var(--red-dark);
 }
 
-/* Footer */
+/* Footer styling */
 .footer-container {
     background: url("./img/black-bg.png");
     color: white;
