@@ -1,178 +1,116 @@
-/* EINDOPDRACHT CSS
-Kleuren:
-Rood: #af2100 (donker / hover) #9e1d00
-Grijswaarden: #bdbdbd #656565 #aeaeae
-*/
-
-/* Reset some basic elements */
-body,
-h1,
-h2,
-h3,
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-/* Variables */
+/* Kleurenpalet en font variables */
 :root {
-    --red: #af2100;
-    --red-dark: #9e1d00;
-    --grey-light: #bdbdbd;
-    --grey: #656565;
-    --grey-dark: #aeaeae;
-    --font-family: 'Arial', sans-serif;
+    --primary-color: #d32f2f;
+    --secondary-color: #f9a825;
+    --background-color: #fbe9e7;
+    --text-color: #333;
+    --border-color: #ddd;
+    --font-family-header: 'Lobster', cursive;
+    --font-family-body: 'Open Sans', sans-serif;
 }
 
 /* Basic styling */
 body {
-    font-family: var(--font-family);
-    line-height: 1.6;
-    background: url(./img/white-bg.png) repeat,
-        url(./img/black-bg.png) repeat-x bottom;
-    color: black;
-}
-
-/* Header styling */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 20px;
-    width: 70%;
-    margin: 0 auto;
-    height: 120px;
-}
-
-.logo-container {
-    background-color: var(--red);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    border-bottom: 10px solid var(--red-dark);
-    width: 165px;
-    height: 100%;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: baseline;
-    gap: 20px;
-}
-
-header nav ul li {
+    font-family: var(--font-family-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-}
-
-header nav ul li a {
-    color: var(--red);
-    /* Same color as article titles */
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    font-style: italic;
-}
-
-/* Main content styling */
-main {
-    padding: 20px;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.post {
-    margin-bottom: 30px;
-    /* Increased bottom margin */
-    padding: 20px;
     display: flex;
-    gap: 20px;
-    align-items: baseline;
-    /* Align items on the baseline */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.post .date,
-.post .category {
-    flex: 0 0 150px;
-    color: var(--grey-light);
-    text-align: right;
-    font-weight: 700;
-    font-size: 22px;
-    /* Adjusting size relative to h3 */
-    align-self: baseline;
-    /* Align date with title */
+.container {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
 }
 
-.post .content {
-    flex: 1;
-}
-
-.post .content h2 {
-    color: var(--red);
-    font-style: italic;
-    /* Italic style for article titles */
-    font-weight: bolder;
-    margin: 0;
-    /* Remove margin */
-}
-
-.post .content .read-more {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 20px;
-    /* 10px less in height */
-    background-color: var(--red);
-    color: white;
-    text-decoration: none;
-    width: 190px;
-    /* Adjusted width */
+h1 {
+    font-family: var(--font-family-header);
+    color: var(--primary-color);
     text-align: center;
-    font-style: italic;
-    /* Italic style for read more */
-}
-
-.post .content .read-more:hover {
-    background-color: var(--red-dark);
-}
-
-/* Footer styling */
-.footer-container {
-    background: url("./img/black-bg.png");
-    color: white;
-    padding: 20px;
-}
-
-footer {
-    width: 80%;
-    margin: 10px auto;
+    font-size: 2.5em;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-footer h3 {
-    color: var(--grey);
-    font-size: 25px;
+h1 svg {
+    margin-right: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 10px;
+    font-size: 1.2em;
+}
+
+.form-group {
     margin-bottom: 15px;
 }
 
-.footer-column ul {
-    list-style: none;
-    padding: 0;
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
-.footer-column ul li a {
-    text-decoration: none;
+label svg {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: var(--font-family-body);
+    font-size: 1em;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 15px;
+    background-color: var(--primary-color);
     color: white;
-    display: block;
-    line-height: 2.5;
-    font-style: italic;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
 }

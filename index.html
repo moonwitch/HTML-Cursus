@@ -4,100 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Layout</title>
+    <title>Pizza Bestelformulier</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="logo-container">
-            <div class="logo">HTML</div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">archives</a></li>
-                <li><a href="#">contact</a></li>
-                <li><a href="#">rss</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="post">
-            <div class="date">
-                <span>5.21.2010</span>
-                <span class="category">articles</span>
-            </div>
-            <div class="content">
-                <h2>10 Geweldige tips</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati officia, expedita rerum, adipisci dolor itaque corrupti nihil quidem amet labore doloremque quos, eum nemo voluptatibus assumenda fugiat vel sed consequuntur?
-                Modi repudiandae officia molestiae quibusdam expedita temporibus impedit itaque delectus natus, corrupti accusantium incidunt ex velit? Veritatis, eligendi et neque consectetur non aliquam tempore eum dolorem dolore odio aspernatur enim!
-                Eius magnam sint aliquam. Sint delectus numquam ullam nam quae fuga fugiat error animi? Provident aspernatur officia delectus, doloremque odio sed sunt minus ipsam, in debitis libero perspiciatis voluptate voluptatibus?
-                Itaque in dolor consequuntur vitae ipsam iusto exercitationem repellat doloribus sed consectetur iure atque necessitatibus aut ipsa quibusdam cumque, placeat eaque quisquam inventore maxime, odit voluptatum repellendus iste? Fuga, ea?</p>
-                <a href="#" class="read-more">Lees meer</a>
-            </div>
-        </section>
-        <section class="post">
-            <div class="date">
-                <span>5.17.2010</span>
-                <span class="category">inspiration</span>
-            </div>
-            <div class="content">
-                <h2>Top 10 websites van dit jaar</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati officia, expedita rerum, adipisci dolor itaque corrupti nihil quidem amet labore doloremque quos, eum nemo voluptatibus assumenda fugiat vel sed consequuntur?
-                Modi repudiandae officia molestiae quibusdam expedita temporibus impedit itaque delectus natus, corrupti accusantium incidunt ex velit? Veritatis, eligendi et neque consectetur non aliquam tempore eum dolorem dolore odio aspernatur enim!
-                Eius magnam sint aliquam. Sint delectus numquam ullam nam quae fuga fugiat error animi? Provident aspernatur officia delectus, doloremque odio sed sunt minus ipsam, in debitis libero perspiciatis voluptate voluptatibus?
-                Itaque in dolor consequuntur vitae ipsam iusto exercitationem repellat doloribus sed consectetur iure atque necessitatibus aut ipsa quibusdam cumque, placeat eaque quisquam inventore maxime, odit voluptatum repellendus iste? Fuga, ea?</p>
-                <a href="#" class="read-more">Lees meer</a>
-            </div>
-        </section>
-    </main>
-    <div class="footer-container">
-        <footer>
-            <div class="footer-column">
-                <h3>Categories:</h3>
-                <ul>
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Graphics</a></li>
-                    <li><a href="#">Inspiration</a></li>
-                    <li><a href="#">Retro</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Social:</h3>
-                <ul>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Flickr</a></li>
-                    <li><a href="#">Behance</a></li>
-                    <li><a href="#">Last.FM</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Latest:</h3>
-                <ul>
-                    <li><a href="#">10 Fantastic Photography Tips</a></li>
-                    <li><a href="#">Top 10 Tips for New Bloggers</a></li>
-                    <li><a href="#">Getting Your Stock Photos Seen</a></li>
-                    <li><a href="#">10 Fantastic Photography Tips</a></li>
-                    <li><a href="#">Top 10 Tips for New Bloggers</a></li>
-                    <li><a href="#">Getting Your Stock Photos Seen</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Popular:</h3>
-                <ul>
-                    <li><a href="#">10 Fantastic Photography Tips</a></li>
-                    <li><a href="#">Top 10 Tips for New Bloggers</a></li>
-                    <li><a href="#">Getting Your Stock Photos Seen</a></li>
-                    <li><a href="#">10 Fantastic Photography Tips</a></li>
-                    <li><a href="#">Top 10 Tips for New Bloggers</a></li>
-                    <li><a href="#">Getting Your Stock Photos Seen</a></li>
-                </ul>
-            </div>
-        </footer>
+    <div class="container">
+        <h1>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm5 14.93C16.162 18.447 14.139 19 12 19s-4.162-.553-5-1.07V16h10v.93zM7 8h2v6H7V8zm4 0h2v6h-2V8zm4 0h2v6h-2V8z"
+                    fill="#d32f2f" />
+            </svg>
+            Pizza Bestelformulier
+        </h1>
+        <form action="#" method="post" id="pizza-form">
+            <fieldset>
+                <legend>Stel je eigen pizza samen</legend>
+                <div class="form-group">
+                    <label for="size">Kies de grootte:</label>
+                    <select id="size" name="size" required>
+                        <option value="">Selecteer een grootte</option>
+                        <option value="small">Klein</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Groot</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>Kies je toppings:</p>
+                    <label>
+                        <input type="checkbox" name="toppings" value="pepperoni">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#d32f2f" />
+                        </svg>
+                        Pepperoni
+                    </label>
+                    <label>
+                        <input type="checkbox" name="toppings" value="mushrooms">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm5 14.93C16.162 18.447 14.139 19 12 19s-4.162-.553-5-1.07V16h10v.93zM7 8h2v6H7V8zm4 0h2v6h-2V8zm4 0h2v6h-2V8z"
+                                fill="#a67c00" />
+                        </svg>
+                        Champignons
+                    </label>
+                    <label>
+                        <input type="checkbox" name="toppings" value="onions">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#d32f2f" />
+                        </svg>
+                        Uien
+                    </label>
+                    <label>
+                        <input type="checkbox" name="toppings" value="sausage">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#d32f2f" />
+                        </svg>
+                        Worst
+                    </label>
+                    <label>
+                        <input type="checkbox" name="toppings" value="bacon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#d32f2f" />
+                        </svg>
+                        Spek
+                    </label>
+                    <label>
+                        <input type="checkbox" name="toppings" value="extra_cheese">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#ffeb3b" />
+                        </svg>
+                        Extra kaas
+                    </label>
+                    <label>
+                        <input type="checkbox" name="toppings" value="black_olives">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="#000" />
+                        </svg>
+                        Zwarte olijven
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p>Kies je saus:</p>
+                    <label><input type="radio" name="sauce" value="tomato" required> Tomaat</label>
+                    <label><input type="radio" name="sauce" value="alfredo"> Alfredo</label>
+                    <label><input type="radio" name="sauce" value="pesto"> Pesto</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Klantinformatie</legend>
+                <div class="form-group">
+                    <label for="name">Naam:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefoonnummer:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Leveringsadres</legend>
+                <div class="form-group">
+                    <label for="address">Adres:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">Stad:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="postcode">Postcode:</label>
+                    <input type="text" id="postcode" name="postcode" required>
+                </div>
+            </fieldset>
+            <button type="submit">Bestel nu</button>
+        </form>
     </div>
 </body>
 
