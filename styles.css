@@ -1,169 +1,196 @@
-/* Kleurenpalet en font variables */
-:root {
-    --primary-color: #000;
-    --background-color: #fff;
-    --color-yellow: #f9a825;
-    --color-red: #d32f2f;
-    --font-family-header: 'Bebas Neue', cursive;
-    --font-family-body: 'Montserrat', sans-serif;
+/* clearfix */
+.cf::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-/* Basic styling */
 body {
-    font-family: var(--font-family-body);
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url('img/bg.png');
-    background-size: cover;
-    background-attachment: fixed;
+    margin: unset;
+    font-family: sans-serif;
+    color: rgb(75, 75, 75);
+    line-height: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.main-header {
+    background-color: rgb(36,36,36);
+    padding: 2rem 0;
+    margin-bottom: 4rem;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 3px solid var(--primary-color);
-    width: 90%;
-    max-width: 800px;
-    padding: 20px;
-    box-shadow: 4px 4px var(--color-red);
+    width: 1000px;
+    margin: 0 auto;
+}   
+
+.logo {
+    color: white;
+    float: left;
 }
 
-h1 {
-    font-family: var(--font-family-header);
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-size: 60px;
-    text-shadow: 3px 3px var(--color-red);
+.logo a {
+    color: inherit;
 }
 
-h2 {
-    font-family: var(--font-family-header);
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+.main-nav {
+    float: right;
+    margin-top: 2rem;
+    margin-right: -2rem;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.main-nav a {
+    color: gray;
+    padding: 0 2rem;
 }
 
-fieldset {
-    border: 2px solid var(--primary-color);
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 4px 4px var(--color-red);
-    position: relative;
+.main-nav a:hover {
+    color: white;
+    text-decoration: none;
 }
 
-legend {
-    font-weight: bold;
-    font-size: larger;
-    color: var(--primary-color);
-    padding: 0 10px;
-    text-transform: uppercase;
-    background-color: var(--color-yellow);
-    position: absolute;
-    top: -12px;
-    left: 10px;
-    padding: 0 10px;
+.page-title {
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    color: rgb(46, 46, 46);
 }
 
-.form-group {
-    margin-bottom: 15px;
+/* teasers */
+.teaser {
+    border-bottom: 1px solid black;
+    padding: 2rem 0;
 }
 
-label {
-    display: flex;
-    margin-bottom: 5px;
+.teaser:first-of-type {
+    padding-top: 0;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 10px;
+.teaser:last-of-type {
+    border-bottom: none;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 5px 0 10px;
-    border: 2px solid var(--primary-color);
-    background-color: var(--background-color);
-    font-family: var(--font-family-body);
-    font-size: 1em;
+.teaser-title {
+    font-family: serif;
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 0;
 }
 
-.custom-pizza {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+.teaser-title a {
+    color: inherit;
 }
 
-.custom-section {
-    flex: 1;
-    border: 2px solid var(--primary-color);
-    padding: 10px;
-    box-shadow: 4px 4px var(--color-red);
-    background-color: var(--color-yellow);
+.teaser-info {
+    margin-top: 0;
+    color: rgb(128,128,128);
+    text-transform: lowercase;
+    font-size: .8rem;
 }
 
-.custom-section h3 {
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+.teaser-tag-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: .8rem;
+    margin-left: -.5rem;
+    float: left;
 }
 
-button {
-    padding: 15px;
-    background-color: var(--color-yellow);
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    font-size: 1.2em;
-    cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: 4px 4px var(--color-red);
-    transition: all 0.3s ease;
+.teaser-tag-list li {
+    float: left;
+    margin: 0 .5rem;;
 }
 
-button:hover {
-    color: var(--background-color);
-    background-color: var(--color-red);
-    transition: all 0.3s ease;
-}
-
-/* Tooltip styles */
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 2px dotted black;
-}
-
-.tooltip .tooltipcontents {
-    visibility: hidden;
-    width: 250px;
+.tag {
     background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
+    color: white;
+    padding: .2rem .4rem;
+    border-radius: .25rem;
 }
 
-.tooltip:hover .tooltipcontents {
-    visibility: visible;
+.teaser-btn {
+    float: right;
+}
+
+/* columns */
+.page-main {
+    width: 70%;
+    float: left;
+}
+
+.page-sidebar {
+    width: 25%;
+    float: right;
+}
+
+/* sidebar */
+.sidebar-block {
+    background-color: rgb(220, 220, 220);
+    padding: .5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+
+.sidebar-title {
+    margin-top: 0;
+    border-bottom: 1px solid rgb(172, 172, 172);
+}
+
+/* subfooter */
+.subfooter {
+    background-color: rgb(205, 205, 205);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.subfooter-col {
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+}
+
+.subfooter-col:last-child {
+    margin-right: 0;
+}
+
+.subfooter-sitemap {
+    padding-left: 1rem;
+    list-style: none;
+}
+
+.subfooter-title {
+    font-size: 1.5em;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color:rgba(0, 0, 0, 0.3);
+    margin-top: 0;
+}
+
+.subfooter-map {
+    width: 100%;
+    height: 250px;
+}
+
+/* footer */
+.main-footer {
+    background-color: rgb(160, 160, 160);
+    color: rgba(0, 0, 0, .3);
+    padding: 1rem 0;
+    text-align: center;
 }

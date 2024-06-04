@@ -1,152 +1,164 @@
 <!DOCTYPE html>
-<html lang="nl">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chef's Kiss Pizza - Bestelformulier</title>
-    <link rel="stylesheet" href="https://kit.fontawesome.com/406767c203.css" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <title>Blog</title>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Chef's Kiss Pizza</h1>
-        <h2>Bestelformulier</h2>
-        <form action="#" method="post" id="pizza-form">
-            <fieldset>
-                <legend>Kies de grootte</legend>
-                <div class="form-group">
-                    <label for="size">Kies de grootte:</label>
-                    <select id="size" name="size" required>
-                        <option value="">Selecteer een grootte</option>
-                        <option value="small">Klein</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Groot</option>
-                    </select>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Kies je pizza</legend>
-                <div class="form-group">
-                    <label class="tooltip">
-                        <input type="radio" name="pizza" value="margherita" required> Margherita
-                        <span class="tooltipcontents">
-                            <img src="img/placeholder.jpg" width="75%" alt="Margherita pizza">
-                            <p>De klassieke pizza met tomatensaus, mozzarella en basilicum.</p>
-                        </span>
-                    </label>
-                    <label class="tooltip">
-                        <input type="radio" name="pizza" value="hawaii"> Hawaii
-                        <span class="tooltipcontents">
-                            <img src="img/placeholder.jpg" width="75%" alt="Hawaii pizza">
-                            <p>De controversiële pizza met tomatensaus, mozzarella, ham en ananas.</p>
-                        </span>
-                    </label>
-                    <label class="tooltip">
-                        <input type="radio" name="pizza" value="bolognese"> Bolognese
-                        <span class="tooltipcontents">
-                            <img src="img/placeholder.jpg" width="75%" alt="Bolognese pizza">
-                            <p>De pizza met tomatensaus, mozzarella, gehakt en rode ui.</p>
-                        </span>
-                    </label>
-                    <label class="tooltip">
-                        <input type="radio" name="pizza" value="diablo"> Diablo
-                        <span class="tooltipcontents">
-                            <img src="img/placeholder.jpg" width="75%" alt="Diablo pizza">
-                            <p>De pittige pizza met tomatensaus, mozzarella, pepperoni en jalapeños.</p>
-                        </span>
-                    </label>
-                    <label class="tooltip">
-                        <input type="radio" name="pizza" value="veggie"> Veggie
-                        <span class="tooltipcontents">
-                            <img src="img/placeholder.jpg" width="75%" alt="Veggie pizza">
-                            <p>De vegetarische pizza met tomatensaus, mozzarella, paprika, champignons en rode ui.</p>
-                        </span>
-                    </label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Stel je eigen pizza samen</legend>
-                <div class="form-group">
-                    <div class="custom-pizza">
-                        <div class="custom-section">
-                            <h3>Kies je toppings</h3>
-                            <label>
-                                <input type="checkbox" name="toppings" value="pepperoni">
-                                <i class="fas fa-pepper-hot"></i> Pepperoni
-                            </label>
-                            <label>
-                                <input type="checkbox" name="toppings" value="mushrooms">
-                                <i class="fas fa-mushroom"></i> Champignons
-                            </label>
-                            <label>
-                                <input type="checkbox" name="toppings" value="onions">
-                                <i class="fas fa-onion"></i> Uien
-                            </label>
-                            <label>
-                                <input type="checkbox" name="toppings" value="sausage">
-                                <i class="fas fa-drumstick-bite"></i> Worst
-                            </label>
-                            <label>
-                                <input type="checkbox" name="toppings" value="bacon">
-                                <i class="fas fa-bacon"></i> Spek
-                            </label>
-                            <label>
-                                <input type="checkbox" name="toppings" value="extra_cheese">
-                                <i class="fas fa-cheese"></i> Extra kaas
-                            </label>
-                            <label>
-                                <input type="checkbox" name="toppings" value="black_olives">
-                                <i class="fas fa-olive"></i> Zwarte olijven
-                            </label>
-                        </div>
-                        <div class="custom-section">
-                            <h3>Kies je saus</h3>
-                            <label><input type="radio" name="sauce" value="tomato" required> Tomatensaus</label>
-                            <label><input type="radio" name="sauce" value="alfredo"> Kaassaus</label>
-                            <label><input type="radio" name="sauce" value="pesto"> BBQ saus</label>
-                        </div>
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Klantinformatie</legend>
-                <div class="form-group">
-                    <label for="name">Naam:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Telefoonnummer:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="address">Adres:</label>
-                    <input type="text" id="address" name="address" required>
-                </div>
-                <div class="form-group">
-                    <label for="city">Stad:</label>
-                    <input type="text" id="city" name="city" required>
-                </div>
-                <div class="form-group">
-                    <label for="postcode">Postcode:</label>
-                    <input type="text" id="postcode" name="postcode" required>
-                </div>
-                <div class="form-group">
-                    <label for="comments">Opmerkingen:</label>
-                    <textarea id="comments" name="comments" rows="4"></textarea>
-                </div>
-            </fieldset>
-            <button type="submit">Bestel nu</button>
-        </form>
-    </div>
-</body>
+    <header class="main-header">
+        <div class="container cf">
+            <h1 class="logo">
+                <a href="index.html">MyBlog</a>
+            </h1>
+            
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
 
+    <div class="container cf">
+        <section class="page-main cf">
+            <h1 class="page-title">Latest News</h1>
+            <article class="teaser">
+                <header class="teaser-header">
+                    <h1 class="teaser-title">
+                        <a href="article.html">My Article Title</a>
+                    </h1>
+                    <p class="teaser-info">Published by <a href="#">Kelly</a> on 12/12/2012</p>
+                </header>
+                <div class="teaser-content">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi odio molestias amet cupiditate debitis fuga neque aliquam minus officia provident? Ipsam soluta amet tempora laborum possimus libero sint maxime asperiores.</p>
+                </div>
+                <footer class="teaser-footer cf">
+                    <ul class="teaser-tag-list cf">
+                        <li>
+                            <a href="#" class="tag">Tag 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="tag">Tag 2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="tag">Tag 3</a>
+                        </li>
+                    </ul>
+                    <a class="teaser-btn" href="article.html">Read more...</a>
+                </footer>
+            </article>
+            <article class="teaser">
+                <header class="teaser-header">
+                    <h1 class="teaser-title">
+                        <a href="article.html">My Article Title</a>
+                    </h1>
+                    <p class="teaser-info">Published by <a href="#">Kelly</a> on 12/12/2012</p>
+                </header>
+                <div class="teaser-content">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi odio molestias amet cupiditate debitis fuga
+                        neque aliquam minus officia provident? Ipsam soluta amet tempora laborum possimus libero sint maxime
+                        asperiores.</p>
+                </div>
+                <footer class="teaser-footer cf">
+                    <ul class="teaser-tag-list cf">
+                        <li>
+                            <a href="#" class="tag">Tag 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="tag">Tag 2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="tag">Tag 3</a>
+                        </li>
+                    </ul>
+                    <a class="teaser-btn" href="article.html">Read more...</a>
+                </footer>
+            </article>
+            <article class="teaser">
+                <header class="teaser-header">
+                    <h1 class="teaser-title">
+                        <a href="article.html">My Article Title</a>
+                    </h1>
+                    <p class="teaser-info">Published by <a href="#">Kelly</a> on 12/12/2012</p>
+                </header>
+                <div class="teaser-content">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi odio molestias amet cupiditate debitis fuga
+                        neque aliquam minus officia provident? Ipsam soluta amet tempora laborum possimus libero sint maxime
+                        asperiores.</p>
+                </div>
+                <footer class="teaser-footer cf">
+                    <ul class="teaser-tag-list cf">
+                        <li>
+                            <a href="#" class="tag">Tag 1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="tag">Tag 2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="tag">Tag 3</a>
+                        </li>
+                    </ul>
+                    <a class="teaser-btn" href="article.html">Read more...</a>
+                </footer>
+            </article>
+
+        </section>
+        <aside class="page-sidebar">
+            <h1 class="page-title">Sidebar</h1>
+
+            <section class="sidebar-block">
+                <h1 class="sidebar-title">Search</h1>
+                <form action="">
+                    <input placeholder="Enter your search keywords" type="search" name="search" id="search">
+                </form>
+            </section>
+
+            <section class="sidebar-block">
+                <h1 class="sidebar-title">Tags</h1>
+                <ul class="teaser-tag-list cf">
+                    <li>
+                        <a href="#" class="tag">Tag 1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="tag">Tag 2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="tag">Tag 3</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+    
+    <aside class="subfooter">
+        <div class="container cf">
+            <section class="subfooter-col">
+                <h1 class="subfooter-title">Sitemap</h1>
+                <ul class="subfooter-sitemap">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="contact.html">Partners</a></li>
+                </ul>
+            </section>
+            <section class="subfooter-col">
+                <h1 class="subfooter-title">Locatie</h1>
+                <iframe class="subfooter-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20071.19044229654!2d5.2930647219482365!3d51.036489718372884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c125b1b1457655%3A0x645b166be3cb7e94!2sCVO%20De%20Verdieping!5e0!3m2!1sen!2sbe!4v1717512916995!5m2!1sen!2sbe"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
+            <section class="subfooter-col">
+                <h1 class="subfooter-title">Partners</h1>
+                <img src="img/logo.png" alt="CVO De Verdieping">
+            </section>
+        </div>
+    </aside>
+
+    <footer class="main-footer">
+        <p>Copyright CVO De Verdieping</p>
+    </footer>
+</body>
 </html>
