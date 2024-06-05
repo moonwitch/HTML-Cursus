@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Blog</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container cf">
+            <h1 class="logo">
+                <a href="index.html">MyBlog</a>
+            </h1>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container cf">
+        <section class="page-main">
+            <h1 class="page-title">Contact</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequuntur nisi iste fuga, illo itaque cumque ipsam, eaque aliquam omnis quam porro quas ipsum, hic facilis iusto voluptas quidem debitis nam eveniet modi consequatur necessitatibus blanditiis labore. Esse eaque possimus maiores, ipsam, eum dolorem alias deleniti corporis quos rerum obcaecati.
+            </p>
+
+            <form class="cf">
+                <p class="name_field">
+                    <label for="name">Name</label> <br>
+                    <input type="text" name="name" id="name">
+                </p>
+                <p class="email_field">
+                    <label for="email">Email</label> <br>
+                    <input type="email" name="email" id="email">
+                </p>
+                <p>
+                    <label for="message">Message</label> <br>
+                    <textarea name="message" id="message"></textarea>
+                </p>
+                <p class="cf submit_field">
+                    <button type="submit">Send message</button>
+                </p>
+            </form>
+        </section>
+
+        <aside class="page-sidebar">
+            <h1 class="page-title">Sidebar</h1>
+
+            <section class="sidebar-block">
+                <h1 class="sidebar-title">Search</h1>
+                <form action="">
+                    <input placeholder="Enter your search keywords" type="search" name="search" id="search">
+                </form>
+            </section>
+
+            <section class="sidebar-block">
+                <h1 class="sidebar-title">Tags</h1>
+                <ul class="teaser-tag-list cf">
+                    <li>
+                        <a href="#" class="tag">Tag 1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="tag">Tag 2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="tag">Tag 3</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <aside class="subfooter">
+        <div class="container cf">
+            <section class="subfooter-col">
+                <h1 class="subfooter-title">Sitemap</h1>
+                <ul class="subfooter-sitemap">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="contact.html">Partners</a></li>
+                </ul>
+            </section>
+            <section class="subfooter-col">
+                <h1 class="subfooter-title">Locatie</h1>
+                <iframe class="subfooter-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20071.19044229654!2d5.2930647219482365!3d51.036489718372884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c125b1b1457655%3A0x645b166be3cb7e94!2sCVO%20De%20Verdieping!5e0!3m2!1sen!2sbe!4v1717512916995!5m2!1sen!2sbe"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
+            <section class="subfooter-col">
+                <h1 class="subfooter-title">Partners</h1>
+                <img src="img/logo.png" alt="CVO De Verdieping">
+            </section>
+        </div>
+    </aside>
+
+    <footer class="main-footer">
+        <p>Copyright CVO De Verdieping</p>
+    </footer>
+</body>
+
+</html>

@@ -194,3 +194,100 @@ a:hover {
     padding: 1rem 0;
     text-align: center;
 }
+
+/* article */
+.article-title {
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 0;
+}
+
+.article-info {
+    color: rgb(175, 175, 175);
+}
+
+.article-lead {
+    font-size: 1.5rem;
+    color: rgb(143, 143, 143); 
+    line-height: 2rem;
+}
+
+.article-header {
+    margin-bottom: 4rem;
+}
+
+.article-section {
+    margin: 4rem 0;
+}
+
+.article-section-title {
+    font-size: 1.5rem;
+    color: rgb(142, 142, 142);
+}
+
+figure {
+    margin: 1rem 0;
+}
+
+figcaption {
+    font-size: .8rem;
+    color: rgb(128, 128, 128);
+    text-align: center;
+    font-style: italic;
+}
+
+.float-left {
+    float: left;
+    margin-right: 1rem;
+}
+
+figure.float-left {
+    width: 35%;
+}
+
+.pull-quote {
+    background-color: rgb(224, 224, 224);
+    margin: 2rem 0;
+    padding: 1rem;
+    border-left: .5rem solid rgb(176, 176, 176);
+    color: rgba(0, 0, 0, .8);
+    background-image: url('img/Quotation-Mark-PNG-Free-Download.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* forms */
+input, textarea {
+    box-sizing: border-box;
+    background-color: rgb(235, 235, 235);
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid transparent;
+}
+
+input:focus, textarea:focus {
+    border-color: dimgray;
+}
+
+textarea {
+    height: 250px;
+}
+
+.name_field {
+    width: 47%;
+    float: left;
+}
+
+.email_field {
+    width: 47%;
+    float: right;
+}
+
+.submit_field button {
+    float:right;
+    padding: .5rem;
+    border: none;
+    background-color: dimgray;
+    color: white;
+    cursor: pointer;
+}
