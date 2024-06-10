@@ -1,164 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Blog</title>
+    <title>Rainbow Themed Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <header class="main-header">
-        <div class="container cf">
-            <h1 class="logo">
-                <a href="index.html">MyBlog</a>
-            </h1>
-            
-            <nav class="main-nav">
-                <a href="index.html">Home</a>
-                <a href="index.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+    <header>
+        <div class="logo">
+            <img src="https://via.placeholder.com/200" alt="Logo">
         </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <div class="container cf">
-        <section class="page-main cf">
-            <h1 class="page-title">Latest News</h1>
-            <article class="teaser">
-                <header class="teaser-header">
-                    <h1 class="teaser-title">
-                        <a href="article.html">My Article Title</a>
-                    </h1>
-                    <p class="teaser-info">Published by <a href="#">Kelly</a> on 12/12/2012</p>
-                </header>
-                <div class="teaser-content">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi odio molestias amet cupiditate debitis fuga neque aliquam minus officia provident? Ipsam soluta amet tempora laborum possimus libero sint maxime asperiores.</p>
-                </div>
-                <footer class="teaser-footer cf">
-                    <ul class="teaser-tag-list cf">
-                        <li>
-                            <a href="#" class="tag">Tag 1</a>
-                        </li>
-                        <li>
-                            <a href="#" class="tag">Tag 2</a>
-                        </li>
-                        <li>
-                            <a href="#" class="tag">Tag 3</a>
-                        </li>
-                    </ul>
-                    <a class="teaser-btn" href="article.html">Read more...</a>
-                </footer>
-            </article>
-            <article class="teaser">
-                <header class="teaser-header">
-                    <h1 class="teaser-title">
-                        <a href="article.html">My Article Title</a>
-                    </h1>
-                    <p class="teaser-info">Published by <a href="#">Kelly</a> on 12/12/2012</p>
-                </header>
-                <div class="teaser-content">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi odio molestias amet cupiditate debitis fuga
-                        neque aliquam minus officia provident? Ipsam soluta amet tempora laborum possimus libero sint maxime
-                        asperiores.</p>
-                </div>
-                <footer class="teaser-footer cf">
-                    <ul class="teaser-tag-list cf">
-                        <li>
-                            <a href="#" class="tag">Tag 1</a>
-                        </li>
-                        <li>
-                            <a href="#" class="tag">Tag 2</a>
-                        </li>
-                        <li>
-                            <a href="#" class="tag">Tag 3</a>
-                        </li>
-                    </ul>
-                    <a class="teaser-btn" href="article.html">Read more...</a>
-                </footer>
-            </article>
-            <article class="teaser">
-                <header class="teaser-header">
-                    <h1 class="teaser-title">
-                        <a href="article.html">My Article Title</a>
-                    </h1>
-                    <p class="teaser-info">Published by <a href="#">Kelly</a> on 12/12/2012</p>
-                </header>
-                <div class="teaser-content">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi odio molestias amet cupiditate debitis fuga
-                        neque aliquam minus officia provident? Ipsam soluta amet tempora laborum possimus libero sint maxime
-                        asperiores.</p>
-                </div>
-                <footer class="teaser-footer cf">
-                    <ul class="teaser-tag-list cf">
-                        <li>
-                            <a href="#" class="tag">Tag 1</a>
-                        </li>
-                        <li>
-                            <a href="#" class="tag">Tag 2</a>
-                        </li>
-                        <li>
-                            <a href="#" class="tag">Tag 3</a>
-                        </li>
-                    </ul>
-                    <a class="teaser-btn" href="article.html">Read more...</a>
-                </footer>
-            </article>
-
+    <main>
+        <section class="content">
+            <h1>Welkom op onze Regenboog Website!</h1>
+            <p>Deze website maakt gebruik van een kleurrijk thema en is bedoeld om op te vallen en te inspireren.</p>
         </section>
-        <aside class="page-sidebar">
-            <h1 class="page-title">Sidebar</h1>
-
-            <section class="sidebar-block">
-                <h1 class="sidebar-title">Search</h1>
-                <form action="">
-                    <input placeholder="Enter your search keywords" type="search" name="search" id="search">
-                </form>
-            </section>
-
-            <section class="sidebar-block">
-                <h1 class="sidebar-title">Tags</h1>
-                <ul class="teaser-tag-list cf">
-                    <li>
-                        <a href="#" class="tag">Tag 1</a>
-                    </li>
-                    <li>
-                        <a href="#" class="tag">Tag 2</a>
-                    </li>
-                    <li>
-                        <a href="#" class="tag">Tag 3</a>
-                    </li>
+        <aside>
+            <div class="search">
+                <h2>Zoeken</h2>
+                <input type="text" placeholder="Zoek...">
+                <button>Zoeken</button>
+            </div>
+            <div class="tag-cloud">
+                <h2>Tag Cloud</h2>
+                <ul>
+                    <li><a href="#">Tag1</a></li>
+                    <li><a href="#">Tag2</a></li>
+                    <li><a href="#">Tag3</a></li>
+                    <li><a href="#">Tag4</a></li>
                 </ul>
-            </section>
+            </div>
         </aside>
-    </div>
-    
-    <aside class="subfooter">
-        <div class="container cf">
-            <section class="subfooter-col">
-                <h1 class="subfooter-title">Sitemap</h1>
-                <ul class="subfooter-sitemap">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="contact.html">Partners</a></li>
-                </ul>
-            </section>
-            <section class="subfooter-col">
-                <h1 class="subfooter-title">Locatie</h1>
-                <iframe class="subfooter-map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20071.19044229654!2d5.2930647219482365!3d51.036489718372884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c125b1b1457655%3A0x645b166be3cb7e94!2sCVO%20De%20Verdieping!5e0!3m2!1sen!2sbe!4v1717512916995!5m2!1sen!2sbe"
-                    style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </section>
-            <section class="subfooter-col">
-                <h1 class="subfooter-title">Partners</h1>
-                <img src="img/logo.png" alt="CVO De Verdieping">
-            </section>
+    </main>
+    <div class="sub-footer">
+        <div class="sitemap">
+            <h2>Sitemap</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
-    </aside>
-
-    <footer class="main-footer">
-        <p>Copyright CVO De Verdieping</p>
+        <div class="location">
+            <h2>Locatie</h2>
+            <p>123 Regenboog Straat, 4567 AB Fantasieland</p>
+        </div>
+        <div class="partners">
+            <h2>Partners</h2>
+            <ul>
+                <li><a href="#">Partner1</a></li>
+                <li><a href="#">Partner2</a></li>
+                <li><a href="#">Partner3</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Rainbow Themed Website</p>
     </footer>
 </body>
+
 </html>
