@@ -1,166 +1,155 @@
-/* CSS Variables */
+/* import my fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+
 :root {
-    --font-body: 'Roboto Slab', serif;
-    --font-header: 'Roboto', sans-serif;
-    --color-primary: #ff5f6d;
-    --color-secondary: #ffc371;
-    --color-accent: #fffc00;
-    --color-bg: linear-gradient(135deg, #ff5f6d, #ffc371, #fffc00, #4facfe, #00f2fe, #4facfe, #833ab4, #c13584, #fd1d1d);
-    --color-bg-opacity: rgba(255, 255, 255, 0.8);
-    --color-text: #333;
-    --spacing-padding: 1em;
-    --spacing-margin: 1em;
-    --header-height: 100px;
-    --footer-height: 50px;
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Roboto Slab', serif;
+    --hot-color: rgba(242, 48, 119, 1);
+    --link-color: rgba(2, 103, 114, 1);
+    --text-color: rgba(1, 64, 89, 1);
+    --background-color: rgb(247, 234, 208);
+    --accent-color: rgba(2, 140, 126, 1);
+    --background-image: url("../img/bg.jpeg");  
 }
 
-/* Keyframes for background animation */
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
+/* reset.css */
+@layer reset {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
     }
 
-    50% {
-        background-position: 100% 50%;
+    body {
+        margin: unset;
     }
 
-    100% {
-        background-position: 0% 50%;
+    button,
+    input,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    img,
+    picture,
+    svg,
+    canvas {
+        display: block;
+        max-inline-size: 100%;
+        block-size: auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
     }
 }
 
-/* Base Styles */
 body {
-    font-family: var(--font-body);
-    color: var(--color-text);
-    margin: 0;
-    padding: 0;
-    background: var(--color-bg);
-    background-size: 150% 150%;
-    animation: gradientBG 15s ease infinite;
-}
-
-/* Header */
-header {
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+    background: var(--background-color);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color-bg-opacity);
-    padding: var(--spacing-padding);
-    height: var(--header-height);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
 }
 
-header .logo img {
-    width: 200px;
-    height: 200px;
+h1,
+h2,
+h3 {
+    font-family: var(--primary-font);
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: var(--spacing-margin);
+/* clearfix */
+.cf::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-header nav ul li {
-    display: inline;
+/* fun centering */
+.container {
+    width: 100%;
+    margin: 0 auto;
 }
 
-header nav ul li a {
+/* header en navigation */
+header.main {
+    background-image: var(--background-image);
+    background-size: cover;
+    height:200px;
+    border-bottom: 5px solid var(--text-color);
+}
+
+.logo-text {
+    background-color: var(--link-color);
+    width: 100%;
+    color: var(--background-color);
+    font-size: 4rem;
+    font-weight: bold;
+    float: left;
+    mix-blend-mode: color-burn;
+    padding-left: 3rem;
+}
+
+.logo-text a {
+    color: inherit;
+}
+
+header>nav { 
+    float: right; /* zet nav rechts, maar hou de volgorde intact */
+    padding-top: 1rem;
+}
+
+nav a {
+    color: var(--text-color);
+    font-size: large;
+    font-weight: bold;
+    padding: 0 2rem;
     text-decoration: none;
-    color: var(--color-text);
-    font-family: var(--font-header);
-    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
-/* Main Content and Sidebar */
+nav a:hover {
+    color: white;
+}
+
+aside {
+    float: right;
+    width: 20%;
+    padding: 1em;
+    border-left: 5px solid var(--accent-color);
+    background-color: var(--accent-color);
+}
+
 main {
-    display: flex;
-    padding: var(--spacing-padding);
-    background-color: var(--color-bg-opacity);
-}
-
-main .content {
-    flex: 3;
-    padding-right: var(--spacing-padding);
-}
-
-main aside {
+    margin-right: 22%;
+    padding: 1em;
     flex: 1;
-    padding-left: var(--spacing-padding);
-    background-color: var(--color-bg-opacity);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: var(--spacing-padding);
 }
 
-main aside .search,
-main aside .tag-cloud {
-    margin-bottom: 2em;
-}
-
-main aside h2 {
-    font-family: var(--font-header);
-    font-weight: 700;
-}
-
-main aside .tag-cloud ul {
-    list-style: none;
-    padding: 0;
-}
-
-main aside .tag-cloud ul li {
-    display: inline-block;
-    margin: 0.2em;
-}
-
-main aside .tag-cloud ul li a {
-    text-decoration: none;
-    color: var(--color-text);
-    padding: 0.2em 0.5em;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Sub-footer */
-.sub-footer {
+.subfooter {
     display: flex;
     justify-content: space-around;
-    background-color: var(--color-bg-opacity);
-    padding: var(--spacing-padding);
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    padding: calc(2em + 1vw);
+    background-color: var(--accent-color);
 }
 
-.sub-footer div {
-    flex: 1;
-    padding: 0 var(--spacing-padding);
+.column {
+    /* Stijlen voor de kolommen in de subfooter */
 }
 
-.sub-footer h2 {
-    font-family: var(--font-header);
-    font-weight: 700;
-}
-
-.sub-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sub-footer ul li {
-    margin-bottom: 0.5em;
-}
-
-.sub-footer ul li a {
-    text-decoration: none;
-    color: var(--color-text);
-}
-
-/* Footer */
 footer {
     text-align: center;
-    padding: var(--spacing-padding);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    height: var(--footer-height);
+    padding: 1em;
+    background-color: var(--link-color);
+    /* Donkerdere tint voor de footer */
+    color: white;
 }
