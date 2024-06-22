@@ -299,6 +299,11 @@ button {
     cursor: pointer;
 }
 
+button.btn-submit {
+    margin-bottom: 20px;
+    float: right;
+}
+
 button:hover {
     background-color: var(--hot-color);
 }
@@ -346,15 +351,15 @@ button:hover {
     justify-content: space-between;
 }
 
-.styled-image {
-    width: 30%;
+.about-images>figure>img {
+    width: 60%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
-.styled-image:hover {
-    transform: scale(1.05);
+.about-images>figure>img:hover {
+    transform: scale(1.25);
 }
 
 .skills-table {
