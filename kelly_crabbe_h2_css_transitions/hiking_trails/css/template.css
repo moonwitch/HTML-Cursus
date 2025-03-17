@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    min-width: 500px;
+}
+.quote-banner{
+    min-height: 300px;
+    width: 100%;
+    background-image: url("../assets/img/quote-background.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 15px calc(50% - 500px);
+    text-align: right;
+}
+.main-nav {
+    background-color: rgb(6, 95, 73);
+    padding: 15px calc(50% - 500px);
+    display: flex;
+    gap: 25px;
+}
+.main-nav a {
+    color: rgb(43, 158, 129);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.hiking-overview {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 75px auto;
+}
+.hiking-container {
+    padding: 20px 20px 170px 20px;
+    min-width: 250px;
+    width: 30%;
+    background-color: rgb(243, 243, 243);
+    position: relative;
+    opacity: 0.6;
+}
+.hiking-img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+h2 {
+    margin: 10px 0px;
+}
+.main-footer {
+    background-color: rgb(36, 36, 36);
+    padding: 20px;
+    text-align: center;
+    color: rgb(158, 158, 158);
+}
+
+/* Main Nav Transitions */
+.main-nav a {
+    position: relative;
+    transform: translateY(0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.main-nav a:hover {
+    color: rgb(152, 251, 152); 
+    transform: translateY(-3px);
+    text-shadow: 
+        4px 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+.main-nav a::before {
+    content: '🌿';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover::before {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Containers */
+.hiking-container {
+    transition: all 0.7s ease-in-out;
+}
+
+.hiking-container:hover {
+    opacity: 1;
+    position: relative;
+    top: -25px;
+}
