@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: rgb(37,37,61);
+    position: relative;
+    overflow: hidden;
+}
+.star {
+    height: 200px;
+    position: absolute;
+    top: -200px;
+    animation: fallingStar 10s linear infinite;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+}
+.star-little{
+    scale: 0.5;
+    left: 30%;
+    animation-delay: 2s;
+}
+.star-big{
+    scale: 1.5;
+    left: 70%;
+    animation-delay: 4s;
+}
+@keyframes fallingStar {
+    0% {
+        top: -200px;
+        height: 200px;
+        opacity: 1;
+        transform: translateX(-50%) rotate(0deg);
+    }
+    12.5% {
+        height: 150px;
+        opacity: .5;
+    }
+    25% {
+        height: 100px;
+        opacity: .1;
+    }
+    37.5% {
+        height: 150px;
+        opacity: .5;
+    }
+    50% {
+        height: 105px;
+        opacity: .25;
+    }
+    62.5% {
+        height: 150px;
+        opacity: .5;
+    }
+    75% {
+        height: 100px;
+        opacity: .1;
+    }
+    87.5% {
+        height: 150px;
+        opacity: .5;
+    }
+    100% {
+        top: 100vh;
+        height: 200px;
+        opacity: 1;
+        transform: translateX(-50%) rotate(180deg);
+    }
+}

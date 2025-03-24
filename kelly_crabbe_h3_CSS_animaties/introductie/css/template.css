@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    background-color: rgb(77, 29, 105);
+}
+.viewport-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.viewport-container h1 {
+    font-size: 4em;
+    color: white;
+    opacity: 0;
+    animation: show-text 3s forwards;
+    position: relative;
+}
+
+.from-left {
+    position: relative;
+    left: -50px;
+    animation: ltr 3s forwards;
+}
+.from-right {
+    position: relative;
+    right: -50px;
+    animation: rtl 3s forwards;
+}
+
+/* Keyframeage */
+@keyframes show-text {
+    0% {
+        opacity: 0;
+        bottom: 50px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+@keyframes ltr {
+    0% {
+        left: -50px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes rtl {
+    0% {
+        right: -50px;
+    }
+    100% {
+        right: 0px;
+    }
+}
