@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-nav {
+    background-color: rgb(50, 50, 50);
+    height: 50px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-nav__hamburger-icon {
+    font-size: 40px;
+}
+
+.main-nav__list {
+    list-style: none;
+    /* color: white; */
+    min-height: calc(100vh - 50px);
+    position:absolute;
+    background-color: royalblue;
+    top: 50px;
+    left: -100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+
+.main-nav__list-item a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 20px;
+}
+
+.main-nav__list-item a:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.open {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

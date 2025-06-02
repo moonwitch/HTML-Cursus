@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Carousel with Lorem Picsum</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Simple Carousel with Lorem Picsum</h1>
+        <p>AKA Kelly has **no** idea what images are coming.</p>
+    </header>
+    <main>
+        <div class="carousel">
+            <img class="carousel__img carousel__img--first" id="carousel__first-img"
+                src="https://picsum.photos/1500/1000?random=1&grayscale" />
+            <img class="carousel__img carousel__img--second" src="https://picsum.photos/1500/1000?grayscale&random=2" />
+            <img class="carousel__img carousel__img--third" src="https://picsum.photos/1500/1000?grayscale&random=3" />
+            <img class="carousel__img carousel__img--fourth" src="https://picsum.photos/1500/1000?grayscale&random=4" />
+
+            <div class="carousel__bullet-container">
+                <span class="carousel__bullet" onclick="goToSlide(0)"></span>
+                <span class="carousel__bullet" onclick="goToSlide(1)"></span>
+                <span class="carousel__bullet" onclick="goToSlide(2)"></span>
+                <span class="carousel__bullet" onclick="goToSlide(3)"></span>
+            </div>
+
+            <button class="btn prev" onclick="prevSlide()">Prev</button>
+            <button class="btn next" onclick="nextSlide()">Next</button>
+
+        </div>
+    </main>
+    <script script src="./js/script.js"></script>
+</body>
+
+</html>
