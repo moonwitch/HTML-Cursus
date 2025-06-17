@@ -5,27 +5,15 @@
     --difficulty-color-medium: lightyellow;
     --difficulty-color-hard: lightcoral;
     --font-family: 'Press Start 2P', cursive;
-    /* Use the loaded game font */
 }
 
-/* The p5.js canvas will be behind other elements */
-canvas {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-#grass-bg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-image: url('../assets/grass.png');
-    background-repeat: repeat-x;
-    background-size: auto 100%;
-    z-index: 10;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: 'Press Start 2P', cursive;
+    overflow: hidden; /* Prevent scrollbars */
 }
 
 .game-title,
@@ -83,4 +71,9 @@ button.mode-Hard {
 button:active {
     box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
     transform: translate(2px, 2px); 
+}
+
+button.mute-button {
+    margin-right: 20px;
+    float: right;
 }
