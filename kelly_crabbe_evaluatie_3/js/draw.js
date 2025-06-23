@@ -188,7 +188,7 @@ function updateAndDisplayAstronauts() {
   const centerX = width / 2;
   const centerY = height / 2;
 
-  for (let i = astronauts.length - 1; i >= 0; i--) {
+  for (let i = astronauts.length - 1; i >= 0; i--) { 
     let astro = astronauts[i];
 
     // Move astronaut towards the black hole (center)
@@ -213,12 +213,10 @@ function updateAndDisplayAstronauts() {
     }
 
     // Display astronaut
-    push();
     translate(astro.x, astro.y);
     rotate(astro.rotation);
     imageMode(CENTER);
     image(astronautImage, 0, 0, astro.size, astro.size);
-    pop();
   }
 }
 
